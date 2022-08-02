@@ -26,6 +26,6 @@ public class EnumsTest {
         Method[] methods = Class.forName("com.serenitydojo.model.Feeder").getMethods();
         Method feedMethod = Arrays.stream(methods).filter(method -> method.getName().equals("feeds")).findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("No feeds() method found on the Feeder class"));
-        assertThat(feedMethod.getParameterTypes()[0].getName()).isEqualTo("FoodType");
+        assertThat(feedMethod.getReturnType().getName()).isEqualTo("com.serenitydojo.model.FoodType");
     }
 }
