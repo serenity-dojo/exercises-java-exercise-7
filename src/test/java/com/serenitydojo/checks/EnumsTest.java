@@ -12,13 +12,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class EnumsTest {
     @Test
     public void theFoodTypeEnumShouldExist() throws ClassNotFoundException {
-        assertThat(Class.forName("com.serenitydojo.FoodType")).isNotNull();
-        assertThat(Class.forName("com.serenitydojo.FoodType").isEnum()).isNotNull();
+        assertThat(Class.forName("com.serenitydojo.model.FoodType")).isNotNull();
+        assertThat(Class.forName("com.serenitydojo.model.FoodType").isEnum()).isNotNull();
     }
 
     @Test
     public void theFoodTypeEnumShouldHaveSomeValues() throws ClassNotFoundException {
-        assertThat(Class.forName("com.serenitydojo.FoodType").getEnumConstants()).isNotEmpty();
+        assertThat(Class.forName("com.serenitydojo.model.FoodType").getEnumConstants()).isNotEmpty();
     }
 
     @Test
